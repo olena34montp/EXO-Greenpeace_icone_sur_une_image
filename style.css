@@ -1,0 +1,166 @@
+* {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: rgb(54, 58, 64);
+}
+
+.campaigns {
+  position: relative;
+  color: #fff;
+  background: rgb(114, 190, 49) url(pattern-green.png) repeat scroll 0 0;
+}
+.campaigns a {
+  text-decoration: none;
+  color: inherit;
+}
+.campaigns__title {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 33.33%;
+  height: 300px;
+  padding: 10px 5%;
+}
+.campaigns__title h3 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.campaigns__title--link {
+  width: max-content;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  border-radius: 4px;
+}
+.campaigns__title--link:hover {
+  color: rgb(114, 190, 49);
+  background-color: #fff;
+  transition: all 0.2s;
+}
+.campaigns__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.campaigns__item {
+  width: 33.33%;
+  height: 300px;
+}
+.campaigns__item:nth-of-type(1) {
+  margin-left: 33.33%;
+}
+
+.campaign__link {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.campaign__link::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+}
+.campaign__link:hover::before {
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 0.2s;
+}
+.campaign__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+.campaign__content--icon {
+  display: block;
+  width: 80px;
+  height: 80px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 20px;
+}
+.campaign__link-agriculture {
+  background-image: url(agriculture-bg.jpg);
+}
+.campaign__link-agriculture .campaign__content--icon {
+  background-image: url(agriculture-icon.svg);
+}
+.campaign__link-nuclear {
+  background-image: url(nuclear-bg.jpg);
+}
+.campaign__link-nuclear .campaign__content--icon {
+  background-image: url(nuclear-icon.svg);
+}
+.campaign__link-climate {
+  background-image: url(climat-bg.jpg);
+}
+.campaign__link-climate .campaign__content--icon {
+  background-image: url(climat-icon.svg);
+}
+.campaign__link-forests {
+  background-image: url(forest-bg.jpg);
+}
+.campaign__link-forests .campaign__content--icon {
+  background-image: url(forest-icon.svg);
+}
+.campaign__link-oceans {
+  background-image: url(ocean-bg.jpg);
+}
+.campaign__link-oceans .campaign__content--icon {
+  background-image: url(ocean-icon.svg);
+}
+
+@media screen and (min-width: 520px) and (max-width: 960px) {
+  .campaigns__title {
+    width: 50%;
+  }
+  .campaigns__item {
+    width: 50%;
+  }
+  .campaigns__item:nth-of-type(1) {
+    margin-left: 50%;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 520px) {
+  .campaigns {
+    overflow: hidden;
+  }
+  .campaigns__title {
+    position: relative;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    height: max-content;
+  }
+  .campaigns__title--link {
+    display: none;
+  }
+  .campaigns__list {
+    flex-wrap: nowrap;
+    margin-bottom: 40px;
+    transform: translate3d(109.5px, 0px, 0px);
+  }
+  .campaigns__item {
+    width: auto;
+    min-width: 300px;
+    height: 230px;
+    margin-right: 20px;
+  }
+  .campaigns__item:nth-of-type(1) {
+    margin-left: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
